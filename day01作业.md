@@ -3,13 +3,46 @@
 #### 第二章作业
 
 1.列举你了解的编码及他们之间的区别？
+
+```python
+ASCII: python2默认的编码，一个字母是8位
+Unicode(万国码)：一个字母是32位
+UTF-8：万国码的压缩码，最少用一个字节，最多用4个字节，一个中文是三个字节，24位
+GBK: 专门用作汉文的编码，其中一个中文用两个字节
+```
+
 2.列举你了解的Python2和Python3的区别？
+
+```python
+区别一：默认解释器编码不同
+python2:ASCII
+python3:UTF-8
+区别二：输入的语法不同
+python2：raw_input
+python3：input
+区别三：输出的语法不同
+python2：print 你想要输出的内容
+python3：print（你想要输出的内容）
+```
+
 3.你了解的python都有那些数据类型？
+
+```python
+一、字符串（str）
+二、整型（int）
+三、布尔类型（bool）
+```
+
 4.补充代码，实现以下功能。
 
 ```
 value =  _____ 
 print(value)  # 要求输出  51devops"niubi
+```
+
+```python
+value = ' 51devops"niubi'
+print(value)
 ```
 
 5.用print打印出下面内容：
@@ -21,19 +54,58 @@ print(value)  # 要求输出  51devops"niubi
 古今英雄唯是君。
 ```
 
+```python
+print('''
+⽂能提笔安天下,
+武能上⻢定乾坤.
+⼼存谋略何⼈胜,
+古今英雄唯是君。
+''')
+```
+
 6.变量名的命名规范和建议？
+
+```python
+命名规范：
+一、只能由数字、字母、下划线组成；
+二、不能以数字开头；
+三、不能使用python关键字；
+建议：
+一、见名知意；
+二、若需要用多个单词组成，用下划线连接；
+```
+
 7.如下那个变量名是正确的？
 
 ```
-name = '51devops'
-_ = 'echo'
-_9 = "zhangsan"
-9name = "xxx"
+name = '51devops' 对
+_ = 'echo' 对
+_9 = "zhangsan" 对
+9name = "xxx" 
 devops(edu = 666
 ```
 
 8.简述你了解if条件语句的基本结构。
+
+```python
+主要有三类：if ...
+if ... else ...
+if ...elif...else...
+```
+
 9.设定一个理想数字比如：66，让用户输入数字，如果比66大，则显示猜测的结果大了；如果比66小，则显示猜测的结果小了;只有等于66，显示猜测结果正确。
+
+```python
+number = input('请输入猜测的数字：')
+number = int(number)
+if number > 66:
+    print('大了')
+elif number < 66:
+    print('小了')
+else:
+    print('猜对了')
+```
+
 10.写程序，成绩有ABCDE5个等级，与分数的对应关系如下.
 
 ```
@@ -45,7 +117,27 @@ E    0-39
 ```
 
 要求用户输入0-100的数字后，你能正确打印他的对应成绩.
+
+```python
+score = input('请输入成绩(0-100):')
+score = int(score)
+if score >= 90:
+    print('A')
+elif score >= 80:
+    print('B')
+elif score >= 60:
+    print('C')
+elif score >= 40:
+    print('D')
+else:
+    print('E')
+```
+
 11.模拟10086客服电话（条件语句的嵌套）
+
+```python
+
+```
 
 #### 第三章作业
 
