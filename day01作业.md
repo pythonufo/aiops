@@ -142,18 +142,145 @@ else:
 #### 第三章作业
 
 1.猜数字，设定一个理想数字比如：66，让用户输入数字，如果比66大，则显示猜测的结果大了；如果比66小，则显示猜测的结果小了;只有等于66，显示猜测结果正确，然后退出循环。
+
+```python
+while True:
+    num = input('请输入数字：')
+    num = int(num)
+    if num > 66:
+        print('猜测的结果大了')
+    elif num < 66 :
+        print('猜测的结果小了')
+    else:
+        print('猜测的结果正确')
+        break
+```
+
 2.在上一题的基础，设置：给用户三次猜测机会，如果三次之内猜测对了，则显示猜测正确，退出循环，如果三次之内没有猜测正确，则自动退出循环，并显示‘大笨蛋’。
+
+```python
+count = 1
+while count <= 3:
+    num = input('请输入数字：')
+    num = int(num)
+    if num > 66:
+        print('猜测的结果大了')
+    elif num < 66:
+        print('猜测的结果小了')
+    else:
+        print('猜测的结果正确')
+        break
+    count += 1
+else:
+        print('大笨蛋')
+```
+
 3.使用两种方法实现输出 1 2 3 4 5 6 8 9 10 。
+
+```python
+num = 1
+while num <= 10:
+    if num == 7:
+        num = num + 1
+        continue
+    print(num)
+    num = num + 1
+```
+
 4.求1-100的所有数的和
+
+```python
+count = 1
+sum = 0
+while count <= 100:
+    sum = sum + count
+    count = count + 1
+print(sum)
+```
+
 5.输出 1-100 内的所有奇数
+
+```python
+num = 0
+count = 1
+while count <= 100:
+    num = num + 1
+    if num % 2 == 1:
+        print(num)
+    count = count + 1
+```
+
 6.输出 1-100 内的所有偶数
+
+```python
+num = 0
+count = 1
+while count <= 100:
+    num = num + 1
+    if num % 2 == 0:
+        print(num)
+    count = count + 1
+```
+
 7.求1-2+3-4+5 … 99的所有数的和
+
+```python
+sum = 0
+count = 1
+while count <= 99:
+    if count % 2 == 1:
+        sum = sum + count
+    elif count % 2 == 0:
+        sum = sum - count
+    count = count + 1
+print(sum)
+```
+
 8.⽤户登陆（三次输错机会）且每次输错误时显示剩余错误次数（提示：使⽤字符串格式化）
+
+```python
+count = 1
+while count <= 3:
+    username = input("用户名")
+    password = input("密码")
+    if username == "Agoni" and password == "123":
+        print("登陆成功")
+        break
+    else:
+        print("用户名或密码错误")
+    print("当前输入%s次,剩余%s次" % (count, 3 - count))
+    count = count + 1
+```
+
 9.猜年龄游戏
 要求：允许用户最多尝试3次，3次都没猜对的话，就直接退出，如果猜对了，打印恭喜信息并退出。
 
+```python
+count = 1
+while count <= 3:
+    age = int(input("请输入年龄:"))
+    if age > 18:
+        print("猜大了")
+    elif age < 18:
+        print("猜小了")
+    else:
+        print("猜测正确")
+        break
+    count = count + 1
+    if count > 3:
+        choice = input("是否还想继续玩? Y or N")
+        if choice == "Y":
+            count = 1
+        else:
+            break
+```
+
 10.猜年龄游戏升级版
 要求：允许用户最多尝试3次，每尝试3次后，如果还没猜对，就问用户是否还想继续玩，如果回答Y，就继续让其猜3次，以此往复，如果回答N，就退出程序，如何猜对了，就直接退出。
+
+```python
+
+```
 
 #### 第四章作业
 
